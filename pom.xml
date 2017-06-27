@@ -13,6 +13,7 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jdk.version>1.7</jdk.version>
+	<junit.version>3.8.1</junit.version>
   </properties>
 
   <dependencies>
@@ -28,18 +29,20 @@
 	  <plugins>
 	    <plugin>
 	      <!-- Build an executable JAR -->
-	      <groupId>org.apache.maven.plugins</groupId>
-	      <artifactId>maven-jar-plugin</artifactId>
-	      <version>3.0.2</version>
-	      <configuration>
-	        <archive>
-	          <manifest>
-	            <addClasspath>true</addClasspath>
-	            <classpathPrefix>lib/</classpathPrefix>
-	            <mainClass>com.sid.myob.App</mainClass>
-	          </manifest>
-	        </archive>
-	      </configuration>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-compiler-plugin</artifactId>
+		    <version>3.6.1</version>
+		      <configuration>
+			      <source>1.7</source>
+		          <target>1.7</target>
+		        <archive>
+		          <manifest>
+		            <addClasspath>true</addClasspath>
+		            <classpathPrefix>lib/</classpathPrefix>
+		            <mainClass>com.sid.myob.App</mainClass>
+		          </manifest>
+		        </archive>
+		      </configuration>
 	    </plugin>
 	  </plugins>
 	</build>
